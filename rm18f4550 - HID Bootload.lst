@@ -1,0 +1,105 @@
+MPASM  5.48      RM18F4550 - HID BOOTLOAD.LKR   1-29-2013  18:22:54         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[108]  : Illegal character (/)
+                      00001 // File: Application_18f4550.lkr
+                      00002 
+Error[108]  : Illegal character (/)
+                      00003 // Use this linker for the USB application that will be self programmed by the HID bootloader.
+Error[108]  : Illegal character (/)
+                      00004 // The HID bootloader project itself uses the BootModified.18f4450.lkr file instead.
+                      00005 
+Error[108]  : Illegal character (/)
+                      00006 // THIS LINKER SCRIPT HAS BEEN MODIFIED...  This version is intended to be used
+Error[108]  : Illegal character (/)
+                      00007 // with the "PROGRAMMABLE_WITH_USB_HID_BOOTLOADER" bootloader.  The HID
+Error[108]  : Illegal character (/)
+                      00008 // bootloader occupies memory ranges 0x000-0xFFF.  In order for the code generated
+Error[108]  : Illegal character (/)
+                      00009 // by this project to work with the bootloader, the linker must not put any code
+Error[108]  : Illegal character (/)
+                      00010 // in the 0x00-0xFFF address range.
+                      00011 
+Error[108]  : Illegal character (/)
+                      00012 // This linker script was originated from the 18f4550.lkr file provided by
+Error[108]  : Illegal character (/)
+                      00013 // the MCC18 distribution.
+                      00014 
+Error[122]  : Illegal opcode (.)
+                      00015 LIBPATH .
+                      00016 
+Error[122]  : Illegal opcode (c018i.o)
+                      00017 FILES c018i.o
+Error[122]  : Illegal opcode (clib.lib)
+                      00018 FILES clib.lib
+Error[122]  : Illegal opcode (p18f4550.lib)
+                      00019 FILES p18f4550.lib
+                      00020 
+Error[122]  : Illegal opcode (NAME)
+                      00021 CODEPAGE   NAME=bootloader START=0x0               END=0xFFF          PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00022 CODEPAGE   NAME=vectors    START=0x1000            END=0x1029             PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00023 CODEPAGE   NAME=page       START=0x102A            END=0x7FFF
+Error[122]  : Illegal opcode (NAME)
+                      00024 CODEPAGE   NAME=idlocs     START=0x200000          END=0x200007       PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00025 CODEPAGE   NAME=config     START=0x300000          END=0x30000D       PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00026 CODEPAGE   NAME=devid      START=0x3FFFFE          END=0x3FFFFF       PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00027 CODEPAGE   NAME=eedata     START=0xF00000          END=0xF000FF       PROTECTED
+                      00028 
+Error[122]  : Illegal opcode (NAME)
+                      00029 ACCESSBANK NAME=accessram  START=0x0            END=0x5F
+Error[122]  : Illegal opcode (NAME)
+                      00030 DATABANK   NAME=gpr0       START=0x60           END=0xFF
+MPASM  5.48      RM18F4550 - HID BOOTLOAD.LKR   1-29-2013  18:22:54         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[122]  : Illegal opcode (NAME)
+                      00031 DATABANK   NAME=gpr1       START=0x100          END=0x1FF
+Error[122]  : Illegal opcode (NAME)
+                      00032 DATABANK   NAME=gpr2       START=0x200          END=0x2FF
+Error[122]  : Illegal opcode (NAME)
+                      00033 DATABANK   NAME=gpr3       START=0x300          END=0x3FF
+Error[122]  : Illegal opcode (NAME)
+                      00034 DATABANK   NAME=usb4       START=0x400          END=0x4FF          PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00035 DATABANK   NAME=usb5       START=0x500          END=0x5FF          PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00036 DATABANK   NAME=usb6       START=0x600          END=0x6FF          PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00037 DATABANK   NAME=usb7       START=0x700          END=0x7FF          PROTECTED
+Error[122]  : Illegal opcode (NAME)
+                      00038 ACCESSBANK NAME=accesssfr  START=0xF60          END=0xFFF          PROTECTED
+                      00039 
+Error[122]  : Illegal opcode (NAME)
+                      00040 SECTION    NAME=CONFIG     ROM=config
+                      00041 
+Error[122]  : Illegal opcode (SIZE)
+                      00042 STACK SIZE=0x100 RAM=gpr3
+                      00043 
+Error[122]  : Illegal opcode (NAME)
+                      00044 SECTION    NAME=USB_VARS   RAM=usb4
+Error[129]  : Expected (END)
+MPASM  5.48      RM18F4550 - HID BOOTLOAD.LKR   1-29-2013  18:22:54         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+__18F4550                         00000001
+__DEBUG                           1
+
+Errors   :    35
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+
